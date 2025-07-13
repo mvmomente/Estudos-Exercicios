@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../img/html-icon.ico" type="image/x-icon">
+    <title>Vídeos com HTML5</title>
+</head>
+<body>
+    <h1>Inserido vídeos hospedados localmente</h1>
+    <p>Este vídeo está hospedado no meu próprio servidor. Utilizando a tag &lt;video&gt;.<br>Exemplificando em o código ficará assim:
+        <pre>
+            <code>
+    &lt;video width="500" poster="imagem_thumbnail controls"&gt;
+        &lt;source src="midia/video.mp4" type="video/mp4"&gt;
+        &lt;source src="midia/video.m4v" type="video/m4v"&gt;
+        &lt;source src="midia/video.webm" type="video/webm"&gt;
+        &lt;source src="midia/video.ogg" type="video/ogg"&gt;
+        &lt;p&gt;Seu navegador não suporta a reprodução de video!&lt;/p&gt;
+    &lt;/video&gt;
+            </code>
+        </pre>
+    O código a seguir tem uma estrutura onde é abriado a tag video, e dentro dessa tag temos os seguintes atributos, width, poster e controls. Width é responsavel pelo tamanho de exibição do video, lembrando, <strong>A QUALIDADE E O TAMANHO DO ARQUIVO NÃO DIMINUEM</strong>. Poster é o atributo onde colocamos uma capa para o video, antes de iniciar o video, a imagem do primeiro frame fica como capa, esse atributo é responsavel por trocar por uma imagem de sua escolha. Controls é a barra de controles de um video, iniciar, pausar, aumentar o diminuir volume e etc. Todos esse atributos devem ser declarados dentro da tag video.
+    Os formatos de video importam, e estrutura também, no caso, dentro da tag video, temos outras tags, as source, elas tem o atributo src e type, onde ja vimos que src é onde está nossa midia e o type define o tipo MIME. Na hierarquia da estrutura mp4 é o topo, assim segue uma sequencia, onde mp4, é o video mais leve, e ogg o video mais pesado.</p>
+
+    <!--<video src="midia/12164137_1920_1080_60fps.mp4" width="500" controls></video>-->
+    <video width="500" autoplay controls>
+        <source src="midia/12164137_1920_1080_60fps.mp4" type="video/mp4">
+    </video>
+    <br>
+    <a href="../index.html" rel="prev" type="_self">Voltar</a>
+
+    <h2>Inserindos videos do YouTube</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ue4ZTB_MA80?si=Ng-8WPzHWVn9Ht2N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</body>
+</html>

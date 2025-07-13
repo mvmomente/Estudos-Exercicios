@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../img/html-icon.ico" type="image/x-icon">
+    <title>Aula 03</title>
+</head>
+<body>
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p>
+    <p>Na <strong>Aula 3</strong> foi apresentado como inserir audio na página, o código é esse: 
+    <pre>
+        <code>
+        &lt;audio preload="metadata" autoplay controls&gt;
+            &lt;source src="midia/guanacast-33.mp3" type="audio/mpeg"&gt;
+            &lt;source src="midia/guanacast-33.ogg" type="audio/ogg"&gt;
+            &lt;source src="midia/guanacast-33.wav" type="audio/wav"&gt; &lt;--Tentar evitar arquivos Wav, pois, são arquivos muito pesados. Arquivos com qualidades boas são para Download e não Navegação!--&gt;
+            &lt;Infelizmente seu navegador não consegue reproduzir áudio. &lt;a href="midia/guanacast-33.mp3"&gt;Clique Aqui para Baixar o Arquivo&gt;<&gt;
+        &lt;/audio&gt;
+        </code>
+    </pre>
+    Este código abrimos a tag <strong>audio</strong> onde nela temos os seguintes atributos, preload, autoplay e controls. Preload, é um atributo importantissimo, pois ele indica ao navegador como deve carregar o áudio, nele, podemos ter valores como:
+    <pre>
+        <p><strong>none</strong>: Não carrega o áudio até que o usuario inicie a reprodução<br><strong>metadata</strong>: Carrega apenas os metadados (como duração e faixa de áudio), sem baixar o conteúdo.<br><strong>auto</strong>: Tenta carregar o áudio automaticamente, dependendo da situação (conexão, dispositivos, etc.).</p>
+    </pre>
+    Temos também o autoplay, onde o áudio ira começar tocar sozinho, quando pronto. Controls exibe os controles padrões do player de áudio, iniciar e pausar, aumentar e diminuir o volume. Dentro da tag audio, temos outra tag, a source, onde é utilizado para especificar múltiplas fontes de mídia, nela temos os atributos, src e type. Src irá definir o caminho da mídia e type indica o tipo MIME do arquivo, que ajuda o navegador a identificar o formato. Passando para os formatos, os mais comuns aceitos pelos navegadores são, <strong>MP3, WAV, OGG, AAC.</strong> No código a estrutura de sources importa, pois irá carregar um pós o outro, exemplo, se o mpeg não carregar, ele irá tentar o ogg assim por diante, no caso foi definido por tamanho do mais leve ao mais pesado.</p>
+
+    <!--"<audio src="midia/happy-mistake.mp3" controls autoplay></audio>" só funciona formatos Open-Source, MP3, WAV e OGG. Alguns navegadores não tem compatibilidade com esse método-->
+
+    <audio preload="metadata" autoplay controls>
+        <source src="midia/guanacast-33.mp3" type="audio/mpeg">
+        <source src="midia/guanacast-33.ogg" type="audio/ogg">
+        <source src="midia/guanacast-33.wav" type="audio/wav"> <!--Tentar evitar arquivos Wav, pois, são arquivos muito pesados. Arquivos com qualidades boas são para Download e não Navegação!-->
+        <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="midia/guanacast-33.mp3" download="guanacast-33.mp3">Clique Aqui para Baixar o Arquivo</a></p>
+    </audio>
+
+    <br>
+    <a href="../capitulo11.html" rel="prev" type="_self">Voltar</a>
+</body>
+</html>
